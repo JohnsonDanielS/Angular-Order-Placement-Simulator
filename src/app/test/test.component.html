@@ -1,0 +1,19 @@
+<p>test works!</p>
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Merchant ID</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let value of data"> 
+        <td>{{value.ID}}</td>
+        <td>{{value.Rating}}</td>
+      </tr>
+    </tbody>
+</table>
+<input type="text" name="name" #myNameElem>
+    
+<button (click)="getValue()">Get Value</button>
+<button (click)="resetValue()">Reset</button>

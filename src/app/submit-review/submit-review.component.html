@@ -1,0 +1,59 @@
+<h3 id="fh2">WE APPRECIATE YOUR REVIEW!</h3>
+<h4 id="fh6">
+  Your review will help us to know the legitimacy of the Merchant
+</h4>
+<div class="pinfo">Order ID</div>
+<div class="form-group">
+  <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-id-card"></i></span>
+      <input class="form-control" value="{{ array[0] }}" #OrderID readonly />
+    </div>
+  </div>
+</div>
+<div class="pinfo">Merchant ID</div>
+<div class="form-group">
+  <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-id-card"></i></span>
+      <input class="form-control" value="{{ array[1] }}" #MerchantID readonly />
+    </div>
+  </div>
+</div>
+<div class="pinfo">Rate the overall services</div>
+
+<div class="form-group">
+  <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-heart"></i></span>
+      <select class="form-control" #Rating>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="pinfo">Write your feedback.</div>
+
+<div class="form-group">
+  <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+      <textarea class="form-control" id="review" rows="3"></textarea>
+    </div>
+  </div>
+</div>
+
+<button class="btn btn-primary" (click)="confirmReview(Rating.value)">
+  Submit
+</button>
+
+<script src="https://use.fontawesome.com/a6f0361695.js"></script>
+<!--li *ngFor="let i of data">
+  {{i.ID}}
+  {{i.Rating}}
+</li-->

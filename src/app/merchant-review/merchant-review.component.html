@@ -1,0 +1,37 @@
+<h2 id="fh2">Pay to Merchant</h2>
+<div class="form-group">
+  <div class="pinfo">Merchant ID</div>
+  <div class="col-md-4 inputGroupContainer" >
+  <div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-id-card"></i></span>
+  
+  <input  class="form-control"  value="{{data1}}" readonly>
+    </div>
+  </div>
+</div>
+<div class="pinfo">Rating</div>
+<div *ngFor="let value of data">
+      <div class="col-md-4 inputGroupContainer" >
+      <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-star"></i></span>
+      <input  value="{{value.Rating}}" class="form-control"  #Rating readonly>
+      </div>
+      </div>  <br>
+      <label *ngIf="value.Rating==0">No Rating Available</label>
+</div>
+<div class="pinfo">Enter Amount</div>
+
+<div class="col-md-4 inputGroupContainer">
+  <form [formGroup]="registerForm" (ngSubmit)="warning()">
+    <div class="form-group">
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-inr"></i></span>
+      <input  formControlName="Amount"  class="form-control"  type="text">
+        </div>
+    
+  </div>
+  </div>
+   <button type="submit" class="btn btn-primary">Proceed to Pay</button>
+   </form>
+</div>
